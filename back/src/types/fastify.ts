@@ -15,6 +15,7 @@ declare module "fastify" {
     verifySelfOrAdmin: authenticateFunction;
     verifyTemaCreator: authenticateFunction;
     verifyParamsInBody: authenticateFunction;
+    verifyCommentCreatorOrAdmin: authenticateFunction;
   }
 }
 

@@ -1,6 +1,6 @@
 import { Static, Type } from "@sinclair/typebox";
 export const IdTema = Type.Object({
-  id_tema: Type.Integer({ description: "Identificador único del usuario" }),
+  id_tema: Type.Integer({ description: "Identificador único del tema" }),
 });
 export type IdTema = Static<typeof IdTema>;
 
@@ -10,7 +10,6 @@ export const Tema = Type.Object(
     id_usuario: Type.Integer(),
     titulo: Type.String({ description: "Titulo del tema" }),
     descripcion: Type.String({ description: "Nombre del tema" }),
-    creador: Type.String({ description: "Creador de la tarea" }),
   },
   {
     examples: [

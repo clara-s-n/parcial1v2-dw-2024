@@ -7,6 +7,7 @@ import { FastifyReply } from "fastify/types/reply.js";
 import { IdUsuarioType } from "../types/usuario.js";
 import { IdTema, Tema } from "../types/tema.js";
 import * as temaService from "../services/temas.js";
+import pool from "../services/db.js";
 
 const jwtOptions: FastifyJWTOptions = {
   secret: process.env.JWT_SECRET || "",
@@ -89,4 +90,16 @@ export default fp<FastifyJWTOptions>(async (fastify) => {
       }
     }
   );
+
+  fastify.decorate(
+      "verifyCommentCreatorOrAdmin",
+        async function (request: FastifyRequest, reply: FastifyReply) {
+            const usuarioToken = request.user;
+            const { id_comentario } = request.params as { id_comentario: number };
+            const comentario = await pool.query(`SELECT * FROM public.comentarios WHERE id_comentario = $1`, [id_comentario])
+            if (comentario.rows[0].id_usuario !== usuarioToken.id_usuario && !usuarioToken.is_admin)
+                throw reply.unauthorized("No estás autorizado a modificar un comentario que no creaste si no eres admin.");
+        }
+  );
+
 });
