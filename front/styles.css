@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para el header */
+header {
+    background-color: rgba(93, 197, 201, 0.66);
+    color: #183118;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.user-info {
+    font-size: 0.9em;
+}
+
+.logout-button {
+    color: #183118;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: 1px solid #183118;
+    border-radius: 3px;
+}
+
+.logout-button:hover {
+    background-color: #183118;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+/* Estilos para el login */
+.login-form {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-form input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(93, 197, 201, 0.66);
+    color: #183118;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #5dc5c9;
+}
+
+/* Estilos para la lista de cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #207339;
+    text-decoration: none;
+}
+
+/* Estilos para la card de agregar */
+.add-card {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Centramos el botón de agregar en la card */
+.add-card button {
+    padding: 10px 20px;
+    background-color: #5dc5c9;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.add-card button:hover {
+    background-color: #207339;
+}
+
+
+
+/* Estilos para los detalles de la card */
+.card-details {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgba(93, 197, 201, 0.66);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 3px;
+    /* Hacemos que ocupe dos espacios*/
+    grid-column: span 2;
+}
+
+.back-button:hover {
+    background-color: #5dc5c9;
+}
+
+.edit-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgba(93, 197, 201, 0.66);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.edit-button:hover {
+    background-color: #207339;
+}
+
+.delete-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgba(93, 197, 201, 0.66);
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.delete-button:hover {
+    background-color: #a70000;
+}
+
+.button-container {
+    justify-content: space-between;
+    /* Los obligamos a tomar todo el espacio de la card*/
+    display: grid;
+    width: 100%;
+    /* Hacemos que se ordenen de a dos*/
+    grid-template-columns: repeat(2, 1fr);
+    /* Un poco de espacio entre los botones por los costados*/
+    column-gap: 10px;
+}
