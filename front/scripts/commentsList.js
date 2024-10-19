@@ -58,7 +58,10 @@ function createTaskCard(task) {
             <h4>Id del tema: ${task.id_tema}</h4>
             <p>Descripcion: ${task.descripcion}</p>
             <p>Id del usuario creador del comentario: ${task.id_usuario}</p>
-            <a href="#" class="back-button">Ver comentarios</a>
+            <div class="button-container">
+            <a href="#" class="edit-button">Editar comentario</a>
+            <a href="#" class="delete-button">Eliminar comentario</a>
+            </div>
         </div>
     `;
     return card;

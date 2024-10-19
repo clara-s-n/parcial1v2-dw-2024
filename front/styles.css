@@ -167,6 +167,7 @@ header h1 {
 
 .edit-button:hover {
     background-color: #207339;
+    color: white;
 }
 
 .delete-button {
@@ -182,6 +183,7 @@ header h1 {
 
 .delete-button:hover {
     background-color: #a70000;
+    color: white;
 }
 
 .button-container {
