@@ -5,7 +5,7 @@ import {CommentSchema} from "../../../../types/comentario.js";
 //import {Type} from "@sinclair/typebox";
 //import {IdUsuarioSchema} from "../../../../types/usuario.js";
 
-const comentariosRoute: FastifyPluginAsync = async (
+const temasRoutes: FastifyPluginAsync = async (
     fastify,
     opts
 ): Promise<void> => {
@@ -62,4 +62,4 @@ const comentariosRoute: FastifyPluginAsync = async (
     });
 }
 
-export default comentariosRoute;
+export default temasRoutes;

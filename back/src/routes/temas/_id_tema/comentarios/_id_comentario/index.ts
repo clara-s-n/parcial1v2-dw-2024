@@ -5,7 +5,7 @@ import {IdTema} from "../../../../../types/tema.js";
 import {Type} from "@sinclair/typebox";
 
 
-const comentariosRoute: FastifyPluginAsync = async (
+const temasRoutes: FastifyPluginAsync = async (
     fastify,
     opts
 ): Promise<void> => {
@@ -63,4 +63,4 @@ const comentariosRoute: FastifyPluginAsync = async (
     });
 };
 
-export default comentariosRoute;
+export default temasRoutes;
