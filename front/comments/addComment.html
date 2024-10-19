@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Agregar comentario</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 <header>
@@ -16,10 +17,11 @@
 </header>
 <div class="container">
   <h2>Agregar comentario</h2>
-  <form id="add-comment-form">
+  <form class="login-form" id="add-comment-form">
+    <input type="hidden" id="theme-id" name="theme-id">
     <label for="comment">Comentario</label>
     <textarea id="comment" name="comment" required></textarea>
-    <button type="submit">Agregar comentario</button>
+    <button type="submit" id="add-comment">Agregar comentario</button>
   </form>
 </body>
 </html>
