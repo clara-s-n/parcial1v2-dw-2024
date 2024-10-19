@@ -37,8 +37,8 @@ async function sendComment(comment) {
                 'Authorization': `Bearer ${auth.token}`
             },
             body: JSON.stringify({
-                id_tema: id_tema,
-                id_usuario: id_usuario,
+                id_tema: this.id_tema,
+                id_usuario: this.id_usuario,
                 descripcion: comment
             })
         });
