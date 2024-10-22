@@ -6,8 +6,7 @@ import {AuthService} from './auth.service';
 })
 export class FetchService {
   readonly API_URL = 'http://localhost/back/';
-  private authService: AuthService = inject(AuthService);
-  private token?: string = this.authService.getToken();
+  private token? = localStorage.getItem('token');
 
   private getHeaders(): HeadersInit {
     if(this.token == undefined || this.token == ''){

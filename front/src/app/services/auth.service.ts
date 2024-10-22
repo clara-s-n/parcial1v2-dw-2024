@@ -23,11 +23,12 @@ export class AuthService {
     console.log("password", password);
     // Hacer llamada a la API
     try{
-      const response = await this.fetchService.post('auth/', JSON.stringify({username, password}));
-      const data = await response.json();
+      const body = JSON.stringify({username: username, contraseña: password});
+      const data = await this.fetchService.post('auth/', body);
       // Guardar token y setearlo en el local storage
       localStorage.setItem('token', data.token);
       localStorage.setItem('user', JSON.stringify(data.usuario));
+      window.alert('Login exitoso');
     }
     catch(error){
       throw error;
