@@ -1,0 +1,7 @@
+<form (ngSubmit)="this.onSubmitLogin()">
+    <label for="Username"></label>
+    <input type="text" name="Username" placeholder="Username" id="Username" [(ngModel)]="this.username">
+    <label for="Password"></label>
+    <input type="password" name="Password" id="Password" placeholder="Password" [(ngModel)]="this.password">
+    <button type="submit">Log in</button>
+</form>
