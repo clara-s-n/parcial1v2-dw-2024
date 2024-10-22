@@ -1,11 +1,11 @@
 import { Component, inject} from '@angular/core';
 import { FetchService } from '../../services/fetch.service';
-import { NgForOf } from '@angular/common';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-list-themes',
   standalone: true,
-  imports: [NgForOf],
+  imports: [NgFor],
   templateUrl: './list-themes.page.html',
   styleUrl: './list-themes.page.css'
 })
