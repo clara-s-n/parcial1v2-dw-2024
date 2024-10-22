@@ -20,7 +20,7 @@ export class LoginPage {
   async onSubmitLogin() {
     await this.authService.login(this.username, this.password);
     if (this.authService.isValidUser()) {
-      this.router.navigate(['/temas']);
+      this.router.navigate(['/list-themes']);
     }
   }
 }

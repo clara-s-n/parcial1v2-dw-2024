@@ -25,7 +25,10 @@ export class FetchService {
   // Metodo para hacer llamadas GET a la API
   async get<T = any>(url: string): Promise<T>{
     try {
-      const response = await fetch(`${this.API_URL}${url}`);
+      const response = await fetch(`${this.API_URL}${url}`,{
+        method: 'GET',
+        headers: this.getHeaders(),
+      })
       const data = await response.json();
       if (response.ok) {
         return data;

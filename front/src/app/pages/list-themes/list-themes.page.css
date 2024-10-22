@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0 auto; /* Centra el h1 */
+    flex-grow: 1; /* Permite que el h1 ocupe todo el espacio disponible en el centro */
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px; 
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#tareasTable {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    
+}
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+  
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+.actions {
+    display: flex;
+    gap: 20px;
+}
+
