@@ -1,18 +1,15 @@
-import { Component, inject, OnInit} from '@angular/core';
+import { Component, inject} from '@angular/core';
 import { FetchService } from '../../services/fetch.service';
-import { AuthService } from '../../services/auth.service';
-import { Router } from '@angular/router';
+import { NgForOf } from '@angular/common';
 
 @Component({
   selector: 'app-list-themes',
   standalone: true,
-  imports: [],
+  imports: [NgForOf],
   templateUrl: './list-themes.page.html',
   styleUrl: './list-themes.page.css'
 })
 export class ListThemesPage{
-  authService: AuthService = inject(AuthService);
-  router: Router = inject(Router);
   fetchService: FetchService = inject(FetchService);
 
   themes: any = [];

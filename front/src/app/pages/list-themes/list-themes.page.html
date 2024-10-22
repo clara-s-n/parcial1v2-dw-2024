@@ -1,3 +1,4 @@
+
 <main>
   <section>
     <table>
@@ -8,7 +9,7 @@
         </tr>
       </thead>
       <tbody id="temasContainer">
-        <tr>
+        <tr *ngFor="let theme of themes">
           <td>{{ theme.titulo }}</td>
           <td>{{ theme.descripcion }}</td>
         </tr>
